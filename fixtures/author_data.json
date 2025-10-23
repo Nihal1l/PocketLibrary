@@ -1,0 +1,82 @@
+[
+    {
+        "model": "users.author",
+        "pk": 1,
+        "fields": {
+            "name": "J.K. Rowling",
+            "biography": "British author best known for the Harry Potter series, which has become one of the best-selling users series in history."
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 2,
+        "fields": {
+            "name": "George R.R. Martin",
+            "biography": "American novelist and short-story writer best known for his series A Song of Ice and Fire, adapted into the TV show Game of Thrones."
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 3,
+        "fields": {
+            "name": "Agatha Christie",
+            "biography": "English writer known for her detective novels featuring Hercule Poirot and Miss Marple."
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 4,
+        "fields": {
+            "name": "J.R.R. Tolkien",
+            "biography": "English writer, poet, and philologist best known for The Hobbit and The Lord of the Rings trilogy."
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 5,
+        "fields": {
+            "name": "Stephen King",
+            "biography": "American author of horror, supernatural fiction, suspense, and fantasy novels."
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 6,
+        "fields": {
+            "name": "Jane Austen",
+            "biography": "English novelist known for her six major novels including Pride and Prejudice and Sense and Sensibility."
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 7,
+        "fields": {
+            "name": "Mark Twain",
+            "biography": "American writer and humorist famous for The Adventures of Tom Sawyer and Adventures of Huckleberry Finn."
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 8,
+        "fields": {
+            "name": "Ernest Hemingway",
+            "biography": "American novelist, short-story writer, and journalist; awarded the Nobel Prize in Literature in 1954."
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 9,
+        "fields": {
+            "name": "Leo Tolstoy",
+            "biography": "Russian author best known for War and Peace and Anna Karenina."
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 10,
+        "fields": {
+            "name": "Charles Dickens",
+            "biography": "English writer and social critic, considered the greatest novelist of the Victorian era."
+        }
+    }
+]

@@ -1,0 +1,626 @@
+[
+    {
+        "model": "users.author",
+        "pk": 1,
+        "fields": {
+            "name": "J.K. Rowling",
+            "biography": "British author, best known for the Harry Potter series"
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 2,
+        "fields": {
+            "name": "George Orwell",
+            "biography": "English novelist and essayist, journalist and critic"
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 3,
+        "fields": {
+            "name": "Jane Austen",
+            "biography": "English novelist known for romantic fiction"
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 4,
+        "fields": {
+            "name": "Stephen King",
+            "biography": "American author of horror, supernatural fiction, and suspense"
+        }
+    },
+    {
+        "model": "users.author",
+        "pk": 5,
+        "fields": {
+            "name": "Agatha Christie",
+            "biography": "English writer known for mystery novels"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 1,
+        "fields": {
+            "name": "Fiction",
+            "description": "Literary works of imaginative narration"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 2,
+        "fields": {
+            "name": "Mystery",
+            "description": "Detective and crime fiction"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 3,
+        "fields": {
+            "name": "Science Fiction",
+            "description": "Speculative fiction based on scientific concepts"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 4,
+        "fields": {
+            "name": "Romance",
+            "description": "Love stories and romantic fiction"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 5,
+        "fields": {
+            "name": "Horror",
+            "description": "Fiction designed to frighten or unsettle"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 6,
+        "fields": {
+            "name": "biographygraphy",
+            "description": "Life stories of real people"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 7,
+        "fields": {
+            "name": "History",
+            "description": "Historical accounts and analysis"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 8,
+        "fields": {
+            "name": "Self-Help",
+            "description": "Personal development and improvement"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 1,
+        "fields": {
+            "title": "Harry Potter and the Philosopher's Stone",
+            "author": 1,
+            "isbn": "9780747532699",
+            "category": 1,
+            "availability_status": "available",
+            "created_at": "2025-01-15T10:30:00Z",
+            "updated_at": "2025-01-15T10:30:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 2,
+        "fields": {
+            "title": "Harry Potter and the Chamber of Secrets",
+            "author": 1,
+            "isbn": "9780747538493",
+            "category": 1,
+            "availability_status": "borrowed",
+            "created_at": "2025-01-16T11:00:00Z",
+            "updated_at": "2025-02-10T14:20:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 3,
+        "fields": {
+            "title": "1984",
+            "author": 2,
+            "isbn": "9780451524935",
+            "category": 1,
+            "availability_status": "available",
+            "created_at": "2025-01-17T09:15:00Z",
+            "updated_at": "2025-01-17T09:15:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 4,
+        "fields": {
+            "title": "Animal Farm",
+            "author": 2,
+            "isbn": "9780451526342",
+            "category": 1,
+            "availability_status": "available",
+            "created_at": "2025-01-18T13:45:00Z",
+            "updated_at": "2025-01-18T13:45:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 5,
+        "fields": {
+            "title": "Pride and Prejudice",
+            "author": 3,
+            "isbn": "9780141439518",
+            "category": 4,
+            "availability_status": "available",
+            "created_at": "2025-01-19T08:30:00Z",
+            "updated_at": "2025-01-19T08:30:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 6,
+        "fields": {
+            "title": "Sense and Sensibility",
+            "author": 3,
+            "isbn": "9780141439662",
+            "category": 4,
+            "availability_status": "borrowed",
+            "created_at": "2025-01-20T10:00:00Z",
+            "updated_at": "2025-02-11T16:30:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 7,
+        "fields": {
+            "title": "The Shining",
+            "author": 4,
+            "isbn": "9780307743657",
+            "category": 5,
+            "availability_status": "available",
+            "created_at": "2025-01-21T14:20:00Z",
+            "updated_at": "2025-01-21T14:20:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 8,
+        "fields": {
+            "title": "It",
+            "author": 4,
+            "isbn": "9781501142970",
+            "category": 5,
+            "availability_status": "available",
+            "created_at": "2025-01-22T11:45:00Z",
+            "updated_at": "2025-01-22T11:45:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 9,
+        "fields": {
+            "title": "Murder on the Orient Express",
+            "author": 5,
+            "isbn": "9780062693662",
+            "category": 2,
+            "availability_status": "available",
+            "created_at": "2025-01-23T09:00:00Z",
+            "updated_at": "2025-01-23T09:00:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 10,
+        "fields": {
+            "title": "And Then There Were None",
+            "author": 5,
+            "isbn": "9780062073488",
+            "category": 2,
+            "availability_status": "returned",
+            "created_at": "2025-01-24T15:30:00Z",
+            "updated_at": "2025-02-12T10:15:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 11,
+        "fields": {
+            "title": "The Death of Mrs. Westaway",
+            "author": 5,
+            "isbn": "9781501156236",
+            "category": 2,
+            "availability_status": "available",
+            "created_at": "2025-01-25T12:00:00Z",
+            "updated_at": "2025-01-25T12:00:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 12,
+        "fields": {
+            "title": "Carrie",
+            "author": 4,
+            "isbn": "9780307743664",
+            "category": 5,
+            "availability_status": "available",
+            "created_at": "2025-01-26T10:45:00Z",
+            "updated_at": "2025-01-26T10:45:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 13,
+        "fields": {
+            "title": "Emma",
+            "author": 3,
+            "isbn": "9780141439587",
+            "category": 4,
+            "availability_status": "borrowed",
+            "created_at": "2025-01-27T13:20:00Z",
+            "updated_at": "2025-02-13T09:45:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 14,
+        "fields": {
+            "title": "Homage to Catalonia",
+            "author": 2,
+            "isbn": "9780156421171",
+            "category": 7,
+            "availability_status": "available",
+            "created_at": "2025-01-28T11:30:00Z",
+            "updated_at": "2025-01-28T11:30:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 15,
+        "fields": {
+            "title": "Harry Potter and the Prisoner of Azkaban",
+            "author": 1,
+            "isbn": "9780747542155",
+            "category": 1,
+            "availability_status": "available",
+            "created_at": "2025-01-29T14:00:00Z",
+            "updated_at": "2025-01-29T14:00:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 16,
+        "fields": {
+            "title": "The Stand",
+            "author": 4,
+            "isbn": "9780307743688",
+            "category": 5,
+            "availability_status": "available",
+            "created_at": "2025-01-30T09:30:00Z",
+            "updated_at": "2025-01-30T09:30:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 17,
+        "fields": {
+            "title": "The ABC Murders",
+            "author": 5,
+            "isbn": "9780062073501",
+            "category": 2,
+            "availability_status": "borrowed",
+            "created_at": "2025-01-31T10:15:00Z",
+            "updated_at": "2025-02-14T11:20:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 18,
+        "fields": {
+            "title": "Persuasion",
+            "author": 3,
+            "isbn": "9780141439686",
+            "category": 4,
+            "availability_status": "available",
+            "created_at": "2025-02-01T12:45:00Z",
+            "updated_at": "2025-02-01T12:45:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 19,
+        "fields": {
+            "title": "Down and Out in Paris and London",
+            "author": 2,
+            "isbn": "9780156262804",
+            "category": 6,
+            "availability_status": "available",
+            "created_at": "2025-02-02T08:20:00Z",
+            "updated_at": "2025-02-02T08:20:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 20,
+        "fields": {
+            "title": "Harry Potter and the Goblet of Fire",
+            "author": 1,
+            "isbn": "9780747546245",
+            "category": 1,
+            "availability_status": "available",
+            "created_at": "2025-02-03T15:00:00Z",
+            "updated_at": "2025-02-03T15:00:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 21,
+        "fields": {
+            "title": "Misery",
+            "author": 4,
+            "isbn": "9780670813643",
+            "category": 5,
+            "availability_status": "returned",
+            "created_at": "2025-02-04T11:30:00Z",
+            "updated_at": "2025-02-15T13:45:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 22,
+        "fields": {
+            "title": "Death on the Nile",
+            "author": 5,
+            "isbn": "9780062073556",
+            "category": 2,
+            "availability_status": "available",
+            "created_at": "2025-02-05T09:45:00Z",
+            "updated_at": "2025-02-05T09:45:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 23,
+        "fields": {
+            "title": "Mansfield Park",
+            "author": 3,
+            "isbn": "9780141439808",
+            "category": 4,
+            "availability_status": "available",
+            "created_at": "2025-02-06T14:20:00Z",
+            "updated_at": "2025-02-06T14:20:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 24,
+        "fields": {
+            "title": "The Road to Wigan Pier",
+            "author": 2,
+            "isbn": "9780156767507",
+            "category": 7,
+            "availability_status": "borrowed",
+            "created_at": "2025-02-07T10:00:00Z",
+            "updated_at": "2025-02-16T15:30:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 25,
+        "fields": {
+            "title": "Harry Potter and the Order of the Phoenix",
+            "author": 1,
+            "isbn": "9780747551003",
+            "category": 1,
+            "availability_status": "available",
+            "created_at": "2025-02-08T13:15:00Z",
+            "updated_at": "2025-02-08T13:15:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 26,
+        "fields": {
+            "title": "Pet Sematary",
+            "author": 4,
+            "isbn": "9780385730594",
+            "category": 5,
+            "availability_status": "available",
+            "created_at": "2025-02-09T11:40:00Z",
+            "updated_at": "2025-02-09T11:40:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 27,
+        "fields": {
+            "title": "The Mysterious Affair at Styles",
+            "author": 5,
+            "isbn": "9780062073570",
+            "category": 2,
+            "availability_status": "available",
+            "created_at": "2025-02-10T08:50:00Z",
+            "updated_at": "2025-02-10T08:50:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 28,
+        "fields": {
+            "title": "Northanger Abbey",
+            "author": 3,
+            "isbn": "9780141439792",
+            "category": 4,
+            "availability_status": "available",
+            "created_at": "2025-02-11T12:25:00Z",
+            "updated_at": "2025-02-11T12:25:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 29,
+        "fields": {
+            "title": "Burmese Days",
+            "author": 2,
+            "isbn": "9780156148504",
+            "category": 1,
+            "availability_status": "borrowed",
+            "created_at": "2025-02-12T09:30:00Z",
+            "updated_at": "2025-02-17T10:15:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 30,
+        "fields": {
+            "title": "Harry Potter and the Half-Blood Prince",
+            "author": 1,
+            "isbn": "9780747581086",
+            "category": 1,
+            "availability_status": "available",
+            "created_at": "2025-02-13T15:45:00Z",
+            "updated_at": "2025-02-13T15:45:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 31,
+        "fields": {
+            "title": "Salem's Lot",
+            "author": 4,
+            "isbn": "9780307743671",
+            "category": 5,
+            "availability_status": "available",
+            "created_at": "2025-02-14T10:20:00Z",
+            "updated_at": "2025-02-14T10:20:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 32,
+        "fields": {
+            "title": "Curtain",
+            "author": 5,
+            "isbn": "9780062074010",
+            "category": 2,
+            "availability_status": "available",
+            "created_at": "2025-02-15T11:55:00Z",
+            "updated_at": "2025-02-15T11:55:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 33,
+        "fields": {
+            "title": "Lady Susan",
+            "author": 3,
+            "isbn": "9780141197623",
+            "category": 4,
+            "availability_status": "returned",
+            "created_at": "2025-02-16T13:10:00Z",
+            "updated_at": "2025-02-18T09:30:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 34,
+        "fields": {
+            "title": "Keep the Aspidistra Flying",
+            "author": 2,
+            "isbn": "9780156468992",
+            "category": 1,
+            "availability_status": "available",
+            "created_at": "2025-02-17T08:40:00Z",
+            "updated_at": "2025-02-17T08:40:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 35,
+        "fields": {
+            "title": "Harry Potter and the Deathly Hallows",
+            "author": 1,
+            "isbn": "9780545010221",
+            "category": 1,
+            "availability_status": "available",
+            "created_at": "2025-02-18T14:30:00Z",
+            "updated_at": "2025-02-18T14:30:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 36,
+        "fields": {
+            "title": "The Green Mile",
+            "author": 4,
+            "isbn": "9780671041786",
+            "category": 1,
+            "availability_status": "borrowed",
+            "created_at": "2025-02-19T10:15:00Z",
+            "updated_at": "2025-02-19T16:20:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 37,
+        "fields": {
+            "title": "The Murder of Roger Ackroyd",
+            "author": 5,
+            "isbn": "9780062073549",
+            "category": 2,
+            "availability_status": "available",
+            "created_at": "2025-02-20T11:25:00Z",
+            "updated_at": "2025-02-20T11:25:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 38,
+        "fields": {
+            "title": "Coming Up for Air",
+            "author": 2,
+            "isbn": "9780156191395",
+            "category": 1,
+            "availability_status": "available",
+            "created_at": "2025-02-21T09:50:00Z",
+            "updated_at": "2025-02-21T09:50:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 39,
+        "fields": {
+            "title": "The Casual Vacancy",
+            "author": 1,
+            "isbn": "9780316228534",
+            "category": 1,
+            "availability_status": "available",
+            "created_at": "2025-02-22T13:35:00Z",
+            "updated_at": "2025-02-22T13:35:00Z"
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 40,
+        "fields": {
+            "title": "11/22/63",
+            "author": 4,
+            "isbn": "9781451627282",
+            "category": 3,
+            "availability_status": "available",
+            "created_at": "2025-02-23T12:00:00Z",
+            "updated_at": "2025-02-23T12:00:00Z"
+        }
+    }
+]
