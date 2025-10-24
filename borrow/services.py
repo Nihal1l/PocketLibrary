@@ -6,33 +6,46 @@ from rest_framework.exceptions import PermissionDenied, ValidationError
 
 class BorrowService:
     @staticmethod
-    def create_borrow(user_id, cart_id):
+    # In borrow/services.py
+
+    def create_borrow(cart_id, user_id):
+        cart = Cart.objects.get(id=cart_id, user_id=user_id)
+        cart_items = cart.items.select_related('book')
+        
+        # Check if cart is empty
+        if not cart_items.exists():
+            raise ValueError("Cart is empty")
+        
+        # Check availability for ALL books in cart
+        for item in cart_items:
+            if item.book.availability_status != 'available':
+                raise ValueError(f"Book '{item.book.title}' is not available")
+        
+        # Use transaction to ensure all-or-nothing
         with transaction.atomic():
-            cart = Cart.objects.get(pk=cart_id)
-            cart_items = cart.items.select_related('book').all()
-
-            total_price = sum([item.book.price *
-                               item.quantity for item in cart_items])
-
+            # Create the main Borrow record
             borrow = Borrow.objects.create(
-                user_id=user_id, total_price=total_price)
-
-            borrow_items = [
-                BorrowItem(
-                    borrow=borrow,
+                user_id=user_id,
+                status='keeping'
+            )
+            
+            # Create BorrowItem records for each cart item
+            for item in cart_items:
+                BorrowItem.objects.create(
+                    borrow=borrow,  # Link to the main borrow
                     book=item.book,
-                    price=item.book.price,
                     quantity=item.quantity,
-                    total_price=item.book.price * item.quantity
+                    returned=False
                 )
-                for item in cart_items
-            ]
-            # [<BorrowItem(1)>, <BorrowItem(2)>]
-            BorrowItem.objects.bulk_create(borrow_items)
-
-            cart.delete()
-
-            return borrow
+                
+                # Update book availability
+                item.book.availability_status = 'borrowed'
+                item.book.save()
+            
+            # Clear the cart after successful borrow
+            cart_items.delete()
+        
+        return borrow
 
     @staticmethod
     def cancel_borrow(borrow, user):

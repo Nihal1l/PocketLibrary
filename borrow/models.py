@@ -6,7 +6,7 @@ from django.core.validators import MinValueValidator
 
 class Cart(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    user = models.OneToOneField(
+    user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="cart")
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -26,9 +26,6 @@ class CartItem(models.Model):
         return f"{self.quantity} x {self.book.title}"
 
 class Borrow(models.Model):
-    """
-    Represents completed book borrowing transactions.
-    """
     STATUS_CHOICES = [
         ('keeping', 'Keeping'),
         ('returned', 'Returned')
@@ -67,7 +64,9 @@ class BorrowItem(models.Model):
     book = models.ForeignKey(
         Book,
         on_delete=models.CASCADE,
-        related_name='borrow_items'
+        related_name='borrow_items',
+        blank=True,
+        null=True
     )
     quantity = models.IntegerField(default=1)
     returned = models.BooleanField(default=False)

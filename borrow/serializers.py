@@ -1,8 +1,6 @@
 from rest_framework import serializers
 from borrow.models import Cart, CartItem, Borrow, BorrowItem
 from book.models import Book
-from book.serializers import BookSerializer, SimpleUserSerializer
-from borrow.serializers import BorrowSerializer
 from borrow.services import BorrowService
 
 
@@ -79,7 +77,7 @@ class CreateBorrowSerializer(serializers.Serializer):
 
         if not CartItem.objects.filter(cart_id=cart_id).exists():
             raise serializers.ValidationError('Cart is empty')
-
+        
         return cart_id
 
     def create(self, validated_data):
@@ -87,15 +85,14 @@ class CreateBorrowSerializer(serializers.Serializer):
         cart_id = validated_data['cart_id']
 
         try:
-            borrow = BorrowService.create_order(user_id=user_id, cart_id=cart_id)
+            borrow = BorrowService.create_borrow(user_id=user_id, cart_id=cart_id)
             return borrow
         except ValueError as e:
             raise serializers.ValidationError(str(e))
 
     def to_representation(self, instance):
         return BorrowSerializer(instance).data
-
-
+ 
 class BorrowItemSerializer(serializers.ModelSerializer):
     book = SimpleBookSerializer()
 

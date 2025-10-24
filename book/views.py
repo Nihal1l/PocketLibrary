@@ -17,7 +17,7 @@ class BookViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = BookFilter
     pagination_class = DefaultPagination
-    search_fields = ['name', 'description']
+    search_fields = ['title','category__name','author__name','isbn']
     ordering_fields = ['price', 'updated_at']
     permission_classes = [IsAdminOrReadOnly]
 
