@@ -17,15 +17,13 @@ book_router.register('images', BookImageViewSet,
 cart_router = routers.NestedDefaultRouter(router, 'carts', lookup='cart')
 cart_router.register('items', CartItemViewSet, basename='cart-item')
 
-borrow_router = routers.NestedDefaultRouter(router, 'borrows', lookup='borrow')
-borrow_router.register('items', BorrowItemViewSet, basename='borrow-item')
+
 # urlpatterns = router.urls
 
 urlpatterns = [
     path('', include(router.urls)),
     path('', include(book_router.urls)),
     path('', include(cart_router.urls)),
-    path('', include(borrow_router.urls)),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
 ]
